@@ -11,7 +11,7 @@ class UsersController < ApplicationController
         if @user.valid?
             @user.save
             
-            #UserMailer.welcome_email(@user).deliver_now
+            WelcomeMailer.signup_welcome(@user).deliver
 
             payload = {user_id: @user.id}
             token = JWT.encode payload,"secret",'HS256'

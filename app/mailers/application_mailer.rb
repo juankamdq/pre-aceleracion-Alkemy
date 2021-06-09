@@ -3,7 +3,6 @@ class ApplicationMailer < ActionMailer::Base
 
   def welcome_email(user)
     @user = user
-  
-    mail to:  @user.email, subject: "Welcome to Disney Appi"
+    mail to: user.email, subject: "Welcome to Disney Appi"
   end
 end

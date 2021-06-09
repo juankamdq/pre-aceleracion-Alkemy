@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   resources :characters, except: [:show, :edit]
   get '/characters/details', to: "characters#detail" 
-  #get '/characters', to: "characters#search"
 
   resources :movies, except: [:show]
   get '/movies/details', to: "movies#detail"

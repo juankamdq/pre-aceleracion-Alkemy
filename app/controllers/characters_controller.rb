@@ -21,7 +21,7 @@ class CharactersController < ApplicationController
     end
 
 
-    # Creo el actor
+    # Crea el actor
     def create
         @character = Character.new(character_params)
         
